@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
+# Installation guide
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Packages installation prerequisites
+1. Verify that "Digital Experiences" is enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.networks_enable.htm&language=en_US);
+2. Verify that "Allow users to relate a contact to multiple accounts" is enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.enable_shared_contacts.htm&type=5);
+3. Verify that "Chatter" is enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.enable_chatter_settings.htm&type=5);
+4. Verify that "Data Protection and Privacy" is enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.admin_make_data_protection_details_available_in_records.htm&type=5);
+5. Verify that "Field Service" is enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.fs_enable.htm&type=5).
+6. Verify that "Person Accounts" are enabled [as per this guide](https://help.salesforce.com/s/articleView?id=sf.emergency_response_admin_enable_person_accounts.htm&type=5).
 
-## How Do You Plan to Deploy Your Changes?
+## Packages installation procedure
+1. Install [Health Cloud Managed Package](https://carebarriers-dev-ed.lightning.force.com/packagingSetupUI/ipLanding.app?apvId=04t4W000002kbyV).
+2. Install [Health Cloud Unmanaged Package Extension](http://industries.force.com/healthcloudextension).
+3. Install [Health Cloud App Template for Patients](http://industries.force.com/healthcloudextensionpatientapp).
+4. Install [Health Cloud Care Request Extensions](http://industries.force.com/healthcloudextensioncarerequest).
+5. Install [Health Cloud Reports for Patient Referral Management](http://industries.force.com/healthcloudextensionreferralmgmt).
+6. Install [Emergency Response Management](http://industries.force.com/healthcloudextensionerm).
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Post-installation steps
+1. Execute below command in order to assign yourself permission sets and permission set licenses needed to access features of installed Healh Cloud managed and unlocked packages:
+    ```
+    sfdx force:user:permset:assign -n "HealthCloudUtilizationManagement, HealthCloudFoundation, HealthCloudMemberServices, HealthCloudVideoCalls, HealthCloudAppointmentManagement, HealthCloudSocialDeterminants, HealthCloudApexAuraAccess, HealthCloudWaveAdmin, HealthCloudWaveIntegration, HealthCloudAdmin, HealthCloudApi, HealthCloudLimited, HealthCloudPermissionSetLicense, HealthCloudStandard, HCAnalyticsAdmin, HCAnalyticsUser"
+    ```
+2. 
