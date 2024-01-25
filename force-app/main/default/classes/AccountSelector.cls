@@ -1,3 +1,4 @@
+//
 public with sharing class AccountSelector {
 
     public static Account getAccountById(Id accountId) {
