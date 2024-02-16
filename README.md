@@ -21,4 +21,4 @@
     ```
     sfdx force:user:permset:assign -n "HealthCloudUtilizationManagement, HealthCloudFoundation, HealthCloudMemberServices, HealthCloudVideoCalls, HealthCloudAppointmentManagement, HealthCloudSocialDeterminants, HealthCloudApexAuraAccess, HealthCloudWaveAdmin, HealthCloudWaveIntegration, HealthCloudAdmin, HealthCloudApi, HealthCloudLimited, HealthCloudPermissionSetLicense, HealthCloudStandard, HCAnalyticsAdmin, HCAnalyticsUser"
     ```
-2. 
+2. f
