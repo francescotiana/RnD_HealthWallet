@@ -32,5 +32,5 @@ jobs:
       run: sfdx force:auth:jwt:grant --clientid=${{ secrets.CONSUMER_KEY }} --username=${{ secrets.USERNAME }} --jwtkeyfile server.key --setdefaultdevhubusername --setalias=AIomnistudio
     - name: 'Convert Metadata'
       run: sfdx force:source:convert --rootdir=force-app --outputdir=convert
-    - name: 'Run Test on Metadata'
-      run: sfdx force:mdapi:deploy --deploydir=convert --testlevel=RunLocalTests --checkonly -u AIomnistudio    
+    - name: 'Validate Source Code Against Salesforce ORG'
+      run:  sfdx force:source:deploy -p force-app -c -u AIomnistudio    
