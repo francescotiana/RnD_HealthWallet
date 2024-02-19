@@ -46,4 +46,4 @@ jobs:
       
       - name: Validate Source Code Against Salesforce ORG
         run: |
-          sfdx force:source:deploy -p force-app -c -u AIomnistudio
+          sfdx force:source:deploy -p force-app -c -l RunLocalTests -u AIomnistudio
