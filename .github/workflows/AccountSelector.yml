@@ -24,9 +24,10 @@ jobs:
     - name: 'Build and Deploy'
       run: |
          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-                  mkdir sfdx-cli
+                  mkdir ~/sfdx
                   tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
-                  ./sfdx-cli/install
+                  echo "$HOME/sfdx/bin" >> $GITHUB_PATH
+                  ~/sfdx/bin/sfdx version
  # Runs a set of commands using the runners shell
     - name: 'Decrypt file'
       run: openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out server.key -base64 -K ${{secrets.DECRYPTION_KEY}} -iv ${{secrets.DECRYPTION_IV}}
