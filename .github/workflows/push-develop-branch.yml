@@ -55,5 +55,4 @@ jobs:
         run: |
           sfdx force:source:deploy -p force-app  -l RunLocalTests -u AIomnistudio
           
-      - name: 'Deploy destructive changes (if any) to Staging org'
-        run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings
+    
